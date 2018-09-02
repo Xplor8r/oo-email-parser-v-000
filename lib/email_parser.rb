@@ -6,10 +6,10 @@ class EmailParser
   end
   
   def parse
-    if emails.include?(',')
-      email_list = emails.delete! ','
+    if @emails.include?(',')
+      email_list = @emails.delete! ','
     end
-    email_list = emails.split(' ')
+    email_list = @emails.split(' ')
     email_list.uniq
   end
 end
